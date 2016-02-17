@@ -15,4 +15,14 @@ describe('Service: Github', function () {
     expect(!!Github).toBe(true);
   });
 
+    it('should retrieve issues ', function () {
+        var issues;
+        Github.getIssues().
+        then(function(response)
+            {
+               issues = response;
+                expect(issues.length).toBeGreaterThan(0);
+            });
+    });
+
 });
