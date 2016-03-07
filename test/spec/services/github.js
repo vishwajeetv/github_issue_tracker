@@ -17,7 +17,7 @@ describe('Service: Github', function () {
 
     it('should retrieve issues ', function () {
         var issues;
-        Github.getIssues().
+        Github.getIssues('Shippable/support').
         then(function(response)
             {
                issues = response;

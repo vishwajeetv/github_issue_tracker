@@ -10,11 +10,13 @@
 angular.module('githubIssueTrackerApp')
   .service('Github', function ( $http , $q ) {
 
-      this.getIssues = function()
+      this.getOpenIssues = function(repoURL)
       {
-          var url = 'https://api.github.com/repos/Shippable/support/issues';
+          var url = 'https://api.github.com/repos/'+repoURL;
+          var url = 'https://api.github.com/repos/Shippable/support';
 
           var deferred = $q.defer();
+
 
           $http.get(url).
           success(function (response, status) {

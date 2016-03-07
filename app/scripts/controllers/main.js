@@ -15,21 +15,35 @@ angular.module('githubIssueTrackerApp')
       'Karma'
     ];
 
-      $scope.getGitHubIssues = function()
+      $scope.totalNumberOfIssues = 0;
+
+      $scope.getGitHubIssues = function(url)
       {
-          Github.getIssues().
+          var repoURL = url.replace('http://github.com/','');
+          repoURL = repoURL.replace('https://github.com/','');
+
+          var repoURLLength = repoURL.length;
+          if(repoURL[repoURLLength - 1] != '/')
+          {
+              repoURL = repoURL+'/';
+          }
+
+          Github.getOpenIssues(repoURL).
           then(function(response)
               {
-                  console.log(response)
+                  console.log(response);
+                  $scope.totalNumberOfIssues = response.open_issues_count;
               },
               function (response) {
 
               });
+
       }
+
 
       function init()
       {
-          $scope.getGitHubIssues();
+
       }
 
       init();

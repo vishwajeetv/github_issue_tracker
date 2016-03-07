@@ -3,7 +3,23 @@
 
     </div>
     <div flex="60">
-
+        <md-card layout-align="center center">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Github Issue Tracker</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-input-container>
+                <label>Repository URL</label>
+                <input ng-model="url">
+            </md-input-container>
+            <md-card-actions>
+                <md-button class="md-primary md-raised" ng-click="getGitHubIssues(url)" aria-label="Search">
+                    Track
+                </md-button>
+            </md-card-actions>
+            Total Number of Issues : {{totalNumberOfIssues}}
+        </md-card>
     </div>
     <div flex="20">
 
