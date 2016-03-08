@@ -4,6 +4,8 @@
 
 Run `grunt` for building and `grunt serve` for preview.
 
+## [Live Demo](http://www.vishwajeetv.com/github_issue_tracker/dist/#/)
+
 ## Continuous Integration / Build status (with Travis-ci.org ) -
 [![Build Status](https://travis-ci.org/vishwajeetv/github_issue_tracker.svg?branch=master)](https://travis-ci.org/vishwajeetv/github_issue_tracker)
 
