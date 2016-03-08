@@ -5,6 +5,7 @@
  * @name githubIssueTrackerApp.controller:MainCtrl
  * @description
  * # MainCtrl
+ * Main Controller connected to the homepage, sends request to Github service and displays results.
  * Controller of the githubIssueTrackerApp
  */
 angular.module('githubIssueTrackerApp')
