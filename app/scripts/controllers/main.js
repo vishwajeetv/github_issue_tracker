@@ -16,6 +16,7 @@ angular.module('githubIssueTrackerApp')
     ];
 
       $scope.totalNumberOfIssues = 0;
+      $scope.totalNumberOfIssuesLastDay = 0;
 
       $scope.getGitHubIssues = function(url)
       {
@@ -38,6 +39,15 @@ angular.module('githubIssueTrackerApp')
 
               });
 
+          Github.getIssuesCreatedAfter(repoURL).
+          then(function(response)
+              {
+                  console.log(response);
+                  $scope.totalNumberOfIssuesLastDay = response.length;
+              },
+              function (response) {
+
+              });
       }
 
 
