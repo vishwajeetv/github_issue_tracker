@@ -18,14 +18,39 @@
                     Track
                 </md-button>
             </md-card-actions>
-            Total Number of Issues : {{totalNumberOfIssues}}
-            <md-divider></md-divider>
-            Total Number of Issues created since last 24 hours : {{totalNumberOfIssuesLastDay}}
-            <md-divider></md-divider>
-            Total Number of Issues created since last 24 hours : {{totalNumberOfIssuesLastDay}}
-            <md-divider></md-divider>
-            Total Number of Issues created 7 days ago : {{totalNumberOfIssuesSevenDaysAgo}}
-        </md-card>
+
+            <md-card-content>
+
+
+            <md-list>
+                <md-list-item class="md-2-line">
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Total Number of Issues : {{totalNumberOfIssues}}</h3>
+                    </div>
+                </md-list-item>
+
+                <md-list-item class="md-2-line">
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Total Number of Issues opened in last 24 hours : {{totalNumberOfIssuesLastDay}}</h3>
+                    </div>
+                </md-list-item>
+
+                <md-list-item class="md-2-line">
+                    <div class="md-list-item-text" layout="column">
+                        <h3>
+                            Total Number of Issues created before 24 hours but NOT before 7 days ago : {{totalNumberOfIssuesInBetween}}</h3>
+                    </div>
+                </md-list-item>
+                <md-list-item class="md-2-line">
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Total Number of Issues created more than 7 days ago : {{totalNumberOfIssuesSevenDaysAgo}}</h3>
+                    </div>
+                </md-list-item>
+
+               </md-list>
+            </md-card-content>
+        <md-card>
+
     </div>
     <div flex="20">
 
