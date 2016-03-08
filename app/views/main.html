@@ -9,16 +9,27 @@
                     <span class="md-headline">Github Issue Tracker</span>
                 </md-card-title-text>
             </md-card-title>
+            <form class="md-inline-form">
             <md-input-container>
-                <label>Repository URL</label>
-                <input ng-model="url">
-            </md-input-container>
-            <md-card-actions>
-                <md-button class="md-primary md-raised" ng-click="getGitHubIssues(url)" aria-label="Search">
-                    Track
-                </md-button>
-            </md-card-actions>
+                <div layout="row" layout-align="space-between center">
 
+                    <div flex="60">
+                        <label>Repository URL</label>
+                        <input ng-model="url" class="md-input" id="repoURL" required>
+                    </div>
+                    <div flex="20">
+                        <md-button class="md-primary md-raised" class="md-input" type="submit" ng-submit="getGitHubIssues(url)" aria-label="Search">
+                            Track
+                        </md-button>
+                    </div>
+
+                </div>
+
+
+
+            </md-input-container>
+
+            </form>
             <md-card-content>
 
 
