@@ -15,9 +15,9 @@ describe('Service: Github', function () {
     expect(!!Github).toBe(true);
   });
 
-    it('should retrieve issues ', function () {
+    it('should retrieve open issues ', function () {
         var issues;
-        Github.getIssues('Shippable/support').
+        Github.getOpenIssues('Shippable/support').
         then(function(response)
             {
                issues = response;
