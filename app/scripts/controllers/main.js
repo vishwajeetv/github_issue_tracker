@@ -17,6 +17,7 @@ angular.module('githubIssueTrackerApp')
 
       $scope.totalNumberOfIssues = 0;
       $scope.totalNumberOfIssuesLastDay = 0;
+      $scope.totalNumberOfIssuesSevenDaysAgo = 0;
 
       $scope.getGitHubIssues = function(url)
       {
@@ -28,22 +29,33 @@ angular.module('githubIssueTrackerApp')
           {
               repoURL = repoURL+'/';
           }
+      //
+      //    Github.getOpenIssues(repoURL).
+      //    then(function(response)
+      //        {
+      //            console.log(response);
+      //            $scope.totalNumberOfIssues = response.open_issues_count;
+      //        },
+      //        function (response) {
+      //
+      //        });
+      //
+      //    Github.getIssuesCreatedAfter(repoURL).
+      //    then(function(response)
+      //        {
+      //            console.log(response);
+      //            $scope.totalNumberOfIssuesLastDay = response.length;
+      //        },
+      //        function (response) {
+      //
+      //        });
 
-          Github.getOpenIssues(repoURL).
+          Github.getIssuesCreatedBefore(repoURL).
           then(function(response)
               {
+                  console.log("issues created before 7 days");
                   console.log(response);
-                  $scope.totalNumberOfIssues = response.open_issues_count;
-              },
-              function (response) {
-
-              });
-
-          Github.getIssuesCreatedAfter(repoURL).
-          then(function(response)
-              {
-                  console.log(response);
-                  $scope.totalNumberOfIssuesLastDay = response.length;
+                  $scope.totalNumberOfIssuesSevenDaysAgo = response.total_count;
               },
               function (response) {
 
