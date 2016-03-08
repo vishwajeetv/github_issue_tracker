@@ -4,6 +4,9 @@
 
 Run `grunt` for building and `grunt serve` for preview.
 
+## Continuous Integration / Build status (with Travis-ci.org ) -
+[![Build Status](https://travis-ci.org/vishwajeetv/github_issue_tracker.svg?branch=master)](https://travis-ci.org/vishwajeetv/github_issue_tracker)
+
 ## How it works?
 
 This is an AngularJS project.
