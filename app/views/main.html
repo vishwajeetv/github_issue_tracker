@@ -9,7 +9,7 @@
                     <span class="md-headline">Github Issue Tracker</span>
                 </md-card-title-text>
             </md-card-title>
-            <form class="md-inline-form">
+            <form class="md-inline-form" ng-submit="getGitHubIssues(url)">
             <md-input-container>
                 <div layout="row" layout-align="space-between center">
 
@@ -18,7 +18,7 @@
                         <input ng-model="url" class="md-input" id="repoURL" required>
                     </div>
                     <div flex="20">
-                        <md-button class="md-primary md-raised" class="md-input" type="submit" ng-submit="getGitHubIssues(url)" aria-label="Search">
+                        <md-button class="md-primary md-raised" class="md-input" type="submit"  aria-label="Search">
                             Track
                         </md-button>
                     </div>
